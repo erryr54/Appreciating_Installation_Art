@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Installation Art</title>
+    <style>
+      body {
+        background: linear-gradient(
+          to right,
+          rgb(221, 214, 243),
+          rgb(250, 172, 168)
+        );
+        color: #28296d;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      p {
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      figcaption {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      h1,
+      footer {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      footer {
+        font-size: 18px;
+        text-shadow: 11px 9px 10px rgba(230, 0, 248, 0.4);
+        color: #e600f8;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+
+      hr {
+        border-radius: 5px;
+        color: #5e63b6;
+        border: 1px dotted #5e63b6;
+      }
+
+      iframe {
+        max-width: 100%;
+      }
+
+      img {
+        max-width: 100%;
+        filter: brightness(123%) contrast(98%) invert(2%) sepia(5%);
+        border-radius: 20px;
+        transition: all 1000ms ease-in-out;
+      }
+
+      img:hover {
+        filter: contrast(75%);
+        transform: scale(1.1);
+      }
+
+      .button-container {
+        display: flex;
+        width: 100%;
+        min-height: auto;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .grid {
+        background: linear-gradient(
+          275deg,
+          rgb(232, 182, 198) 16%,
+          rgb(169, 157, 207) 64%
+        );
+        border: 1px solid rgba(82, 1, 255, 0.6);
+        border-radius: 20px;
+
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 20px;
+      }
+
+      .ThemeButton {
+        display: block;
+        margin: auto;
+        border-radius: 15px;
+        box-shadow: 13px 18px 33px 4px rgba(242, 54, 213, 0.3);
+        color: #5e63b6;
+        border: 2px solid #5e63b6;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 10px 15px;
+        transition: 0.4s;
+      }
+
+      .ThemeButton:hover {
+        color: #fff;
+        cursor: pointer;
+        background-color: #28296d;
+        box-shadow: 13px 18px 33px 4px rgba(242, 54, 213, 0.3);
+      }
+
+      .JT-BTN {
+        padding: 10px 20px;
+        border-radius: 15px;
+        color: #5e63b6;
+        border: 2px solid #5e63b6;
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0 15px;
+        transition: 0.4s;
+      }
+
+      .JT-BTN:hover {
+        color: #f4788e;
+        cursor: pointer;
+        background-color: #28296d;
+        box-shadow: 13px 18px 33px 4px rgba(242, 54, 213, 0.3);
+      }
+
+      .linkedin-porfile {
+        font-weight: bold;
+        text-shadow: 11px 9px 10px rgba(230, 0, 248, 0.4);
+        color: #e600f8;
+      }
+
+      .MainContainer {
+        display: block;
+        max-width: 700px;
+        background: linear-gradient(
+          110deg,
+          rgb(232, 182, 198) 16%,
+          rgb(164, 144, 219) 65%
+        );
+        padding: 25px;
+        border: 1px solid rgba(231, 15, 114, 0.5);
+        border-radius: 20px;
+        margin: 0 auto;
+        box-shadow: 13px 18px 33px 4px rgba(242, 54, 213, 0.3);
+      }
+
+      .YT-Wolfsburgs-Video {
+        border-radius: 15px;
+        transition: all 1000ms ease-in-out;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .YT-Wolfsburgs-Video:hover {
+        filter: contrast(75%);
+        transform: scale(1.3);
+      }
+
+      .dark {
+        background: black;
+        color: #fff;
+      }
+
+      .dark .ThemeButton {
+        background: black;
+        border: 2px solid #f4788e;
+        color: #f4788e;
+        transition: 0.4s;
+      }
+
+      .dark .MainContainer {
+        background: radial-gradient(rgb(115, 130, 252) 0%, rgb(12, 7, 28) 100%);
+      }
+
+      .dark .grid {
+        background: radial-gradient(rgb(124, 134, 222) 0%, rgb(39, 52, 88) 30%);
+      }
+
+      .dark a {
+        color: #f4788e;
+      }
+
+      .dark h1 {
+        color: #f4788e;
+      }
+
+      .dark h3 {
+        color: #f4788e;
+      }
+
+      .dark .JT-BTN {
+        color: #fff;
+        background: #28296d;
+      }
+      .dark .JT-BTN:hover {
+        color: #f4788e;
+        cursor: pointer;
+        background-color: #28296d;
+        border: 2px solid #f4788e;
+        box-shadow: 13px 18px 33px 4px rgba(242, 54, 213, 0.3);
+      }
+    </style>
+    <button id="DarkBTN" class="ThemeButton">Change Theme</button>
+    <br />
+  </head>
+  <body>
+    <section class="MainContainer">
+      <h1>Appreciating Installation Art</h1>
+      <hr />
+      <p>
+        Installation art is an artistic genre of three-dimensional works that
+        are often site-specific and designed to transform the perception of a
+        space.
+        <a href="https://en.wikipedia.org/wiki/Installation_art" target="_blank"
+          >Wikipedia</a
+        >
+      </p>
+      <p>
+        I cannot help but review these incredible works of art by James Turrel.
+        I'm in awe of this work. I cannot help myself but share all of this with
+        you all.
+      </p>
+      <figure>
+        <iframe
+          class="YT-Wolfsburgs-Video"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/QWekIcZaKns?rel=0&showinfo=0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+        <figcaption>
+          <a
+            href="https://www.designboom.com/art/james-turrell-the-wolfsburg-project-at-the-kunstmuseum-germany/"
+            target="_blank"
+            >The WolfsBurg Project</a
+          >
+          at Kuntsmuseum, Germany
+        </figcaption>
+      </figure>
+      <p>
+        "The sky always seems to be out there, away from us. I like to bring it
+        down in close contact with us. sp you feel you are in it. We feel we are
+        at the bottom of this ocean of air: we are actually on a planet."
+        <strong>James Turrell</strong>
+      </p>
+      <div class="grid">
+        <br />
+        <figure>
+          <img
+            class="ganzfield-photo"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/055/771/original/Ganzfelds.jpeg?1669779674"
+            alt=""
+          />
+          <figcaption class="DhautCaption">"Dhatu: Ganzfelds" 2009</figcaption>
+        </figure>
+        <figure>
+          <img
+            class="encounter-photo"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/055/770/original/Encounter.jpeg?1669779658"
+            alt=""
+          />
+          <figcaption>"Encounter: Skyspaces" 2015</figcaption>
+        </figure>
+        <figure>
+          <img
+            class="open-sky-skyspaces-photo"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/055/773/original/open_sky_skyspaces.jpeg?1669779974"
+            alt=""
+          />
+          <figcaption>"Open Sky: Skyspaces" 2011</figcaption>
+        </figure>
+        <figure>
+          <img
+            class="within=withou-photo"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/055/801/original/within_without.jpeg?1669813043"
+            alt=" "
+          />
+          <figcaption>"Within Without" 2010</figcaption>
+        </figure>
+        <br class="gallery-outter-box" />
+      </div>
+
+      <p>
+        For over half a century, the American artist James Turrell has worked
+        directly with light and space to create artworks that engage viewers
+        with the limits and wonder of human perception. Turrell, an avid pilot
+        who has logged over twelve thousand hours flying, considers the sky as
+        his studio, material and canvas. New Yorker critic Calvin Tompkins
+        writes, “His work is not about light, or a record of light; it is light
+        — the physical presence of light made manifest in sensory form.”
+      </p>
+      <br />
+      <h3>Learn More About this Great Artist:</h3>
+      <div class="button-container">
+        <a
+          href="https://jamesturrell.com/about/introduction/"
+          target="_blank"
+          class="AboutButton"
+          ><button class="JT-BTN">About</button></a
+        >
+        <a
+          href="https://jamesturrell.com/exhibitions/solo/"
+          target="_blank"
+          class="ExhibitionsButton"
+          ><button class="JT-BTN">Exhibitions</button></a
+        >
+        <a
+          href="https://jamesturrell.com/work/type/"
+          target="_blabk"
+          class="WoekButton"
+          ><button class="JT-BTN">Work</button></a
+        >
+        <a
+          href="https://rodencrater.com/"
+          target="_blank"
+          class="RodenCarterButton"
+          ><button class="JT-BTN">Roben Crater</button></a
+        >
+      </div>
+    </section>
+    <footer>
+      <strong>Coded with 🫶🏼 by</strong>
+      <a
+        href="https://www.linkedin.com/in/earomero/"
+        target="_blank"
+        class="linkedin-profile"
+        >Erry</a
+      >
+    </footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        body.classList.toggle("dark");
+      }
+
+      let ThemeButton = document.querySelector(".ThemeButton");
+      ThemeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
